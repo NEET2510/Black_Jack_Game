@@ -1,29 +1,59 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
-    background-image: url("images/table.png");
+    background-image: url("table.jpg"); /* Updated to match your file exactly */
     background-size: cover;
+    background-position: center;
     font-weight: bold;
     color: white;
     text-align: center;
+    margin: 0;
+    padding-top: 10vh; /* Pushes the game down slightly from the very top */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Adds a dark shadow to text for readability */
 }
 
 h1 {
-    color: goldenrod;
+    color: #f1c40f; /* Brighter, richer casino gold */
+    font-size: 45px;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Heavier shadow for the main title */
+    letter-spacing: 2px;
 }
 
 #message-el {
     font-style: italic;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 20px;
+    margin: 10px 0;
 }
 
 button {
-    color: #016f32;
-    width: 150px;
-    background: goldenrod;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    color: #004d20; /* Deep, dark green for the button text */
+    width: 170px;
+    background: linear-gradient(to bottom, #ffd700, #daa520); /* Creates a shiny gold effect */
+    padding: 12px 10px;
     font-weight: bold;
-    border: none;
-    border-radius: 2px;
-    margin-bottom: 2px;
-    margin-top: 2px;
+    font-size: 16px;
+    border: 2px solid #b8860b;
+    border-radius: 8px; /* Smooth, rounded corners */
+    margin: 15px 5px;
+    cursor: pointer; /* Changes the mouse to a pointing hand */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Adds a 3D drop shadow beneath the button */
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /* Smooth animations */
+}
+
+/* What happens when you hover the mouse over the button */
+button:hover {
+    background: linear-gradient(to bottom, #ffea00, #e6b800); /* Slightly brighter gold */
+    transform: translateY(-2px); /* Lifts the button up */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Makes the shadow bigger */
+}
+
+/* What happens when you actively click the button */
+button:active {
+    transform: translateY(2px); /* Presses the button down */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); /* Shrinks the shadow */
 }
