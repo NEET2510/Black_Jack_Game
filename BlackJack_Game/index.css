@@ -1,59 +1,105 @@
+/* Resets default browser margins for a clean slate */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
-    background-image: url("table.jpg"); /* Updated to match your file exactly */
+    background-image: url("table_2.jpg"); /* Matches your new image file verbatim */
     background-size: cover;
     background-position: center;
-    font-weight: bold;
+    background-attachment: fixed;
     color: white;
     text-align: center;
-    margin: 0;
-    padding-top: 10vh; /* Pushes the game down slightly from the very top */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Adds a dark shadow to text for readability */
+    /* Centers the game container perfectly on the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* The new glass-like panel holding the game */
+.container {
+    background-color: rgba(0, 0, 0, 0.65); /* Dark semi-transparent overlay */
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #b8860b;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(218, 165, 32, 0.2);
+    max-width: 450px;
+    width: 90%;
+    backdrop-filter: blur(5px); /* Blurs the green background slightly behind the panel */
 }
 
 h1 {
-    color: #f1c40f; /* Brighter, richer casino gold */
-    font-size: 45px;
-    margin-bottom: 5px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Heavier shadow for the main title */
-    letter-spacing: 2px;
+    color: #f1c40f;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(241, 196, 15, 0.5), 3px 3px 5px rgba(0, 0, 0, 0.9);
+    letter-spacing: 3px;
 }
 
 #message-el {
     font-style: italic;
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 25px;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px black;
 }
 
-p {
-    font-size: 20px;
-    margin: 10px 0;
+/* Styles for the Cards and Sum text */
+.stats p {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 0;
+    background: rgba(255, 255, 255, 0.1); /* Subtle highlight box behind text */
+    padding: 12px;
+    border-radius: 8px;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* Places the buttons side-by-side */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
 }
 
 button {
-    color: #004d20; /* Deep, dark green for the button text */
-    width: 170px;
-    background: linear-gradient(to bottom, #ffd700, #daa520); /* Creates a shiny gold effect */
-    padding: 12px 10px;
-    font-weight: bold;
+    color: #1a1a1a;
+    background: linear-gradient(145deg, #ffd700, #daa520);
+    width: 160px;
+    padding: 15px 10px;
+    font-weight: 900;
     font-size: 16px;
-    border: 2px solid #b8860b;
-    border-radius: 8px; /* Smooth, rounded corners */
-    margin: 15px 5px;
-    cursor: pointer; /* Changes the mouse to a pointing hand */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Adds a 3D drop shadow beneath the button */
-    transition: transform 0.1s ease, box-shadow 0.1s ease; /* Smooth animations */
+    border: 2px solid #ffea00;
+    border-radius: 50px; /* Modern, pill-shaped buttons */
+    cursor: pointer;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
 }
 
-/* What happens when you hover the mouse over the button */
 button:hover {
-    background: linear-gradient(to bottom, #ffea00, #e6b800); /* Slightly brighter gold */
-    transform: translateY(-2px); /* Lifts the button up */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Makes the shadow bigger */
+    background: linear-gradient(145deg, #ffea00, #e6b800);
+    transform: translateY(-3px); /* Lifts up slightly */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
 }
 
-/* What happens when you actively click the button */
 button:active {
-    transform: translateY(2px); /* Presses the button down */
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); /* Shrinks the shadow */
+    transform: translateY(2px); /* Presses down */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#player-el {
+    font-size: 20px;
+    color: #f1c40f;
+    font-weight: bold;
+    margin-top: 15px;
+    border-top: 1px solid rgba(218, 165, 32, 0.5); /* A gold divider line */
+    padding-top: 20px;
+    text-shadow: 1px 1px 2px black;
 }
